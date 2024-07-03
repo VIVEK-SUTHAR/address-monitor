@@ -1,0 +1,26 @@
+[package]
+name = "address-monitor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy = { version = "0.1.2", features = [
+    "full",
+    "node-bindings",
+    "rpc-types-debug",
+    "rpc-types-trace",
+    "json-rpc",
+    "rpc-client",
+    "signer-aws",
+    "signer-keystore",
+    "signer-ledger",
+    "signer-mnemonic",
+    "signer-trezor",
+    "signer-yubihsm",
+] }
+
+# async
+tokio = { features = ["rt-multi-thread", "macros"] }
+futures-util = "0.3"
+# misc
+eyre = "0.6.12"
